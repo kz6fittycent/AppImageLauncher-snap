@@ -1,0 +1,67 @@
+name: appimagelauncher
+version: 'git'
+summary: AppImageLauncher allows you to integrate AppImages
+description: |
+  The core feature of AppImageLauncher is the so-called desktop integration. 
+  AppImageLauncher allows you to integrate AppImages you download into your application menu or launcher to make it easier for you to launch them. 
+  It also takes care of moving them into a central location, where you can find them later if you need access to them again. 
+  Furthermore, it sets up the update and removal entries in the launcher for you.
+  
+  # snap connection info here
+
+license: MIT
+
+base: core18
+grade: stable
+confinement: strict
+
+apps:
+  appimagelauncher:
+    extensions:
+      - gnome-3-28
+    command: appimagelauncher
+    environment:
+      LC_ALL: C.UTF-8
+    plugs:
+      - home
+      - network
+     
+parts:
+  appimagelauncher:
+    source: https://github.com/TheAssassin/AppImageLauncher
+    source-type: git
+    plugin: cmake
+    override-build: |
+      export PREFIX="/usr/local/"
+      mkdir build
+      cd build
+      make libappimage libappimageupdate libappimageupdate-qt
+      cmake .
+      make
+    
+    build-packages:
+      - make
+      - cmake
+      - glib-2
+      - cairo
+      - librsvg
+      - fuse
+      - libarchive
+      - libXpm
+      - qt5
+      - libcurl
+      - boost
+      
+    stage-packages:
+      - make
+      - cmake
+      - glib-2
+      - cairo
+      - librsvg
+      - fuse
+      - libarchive
+      - libXpm
+      - qt5
+      - libcurl
+      - boost    
+    
