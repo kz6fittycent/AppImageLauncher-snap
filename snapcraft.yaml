@@ -47,7 +47,7 @@ parts:
       - libcurl4
       - libboost-dev
       - qt5-default
-      - libinotifytools0-dev
+      - inotify-tools
       
     stage-packages:
       - make
@@ -61,5 +61,5 @@ parts:
       - libcurl4
       - libboost-dev   
       - qt5-default
-      - libinotifytools0-dev
+      - inotify-tools
     
