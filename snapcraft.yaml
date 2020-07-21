@@ -30,7 +30,10 @@ parts:
   appimagelauncher:
     source: https://github.com/TheAssassin/AppImageLauncher
     source-type: git
-    plugin: autotools
+    source-subdir: src
+    plugin: cmake
+    configflags:
+    - -DCMAKE_INSTALL_PREFIX=/usr/local/
     
     build-packages:
       - make
