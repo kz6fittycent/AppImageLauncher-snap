@@ -18,7 +18,7 @@ confinement: strict
 apps:
   appimagelauncher:
     extensions:
-      - gnome-3-28
+      - kde-neon
     command: appimagelauncher
     environment:
       LC_ALL: C.UTF-8
@@ -42,26 +42,24 @@ parts:
     build-packages:
       - make
       - cmake
-      - glib-2
-      - cairo
-      - librsvg
-      - fuse
-      - libarchive
-      - libXpm
-      - qt5
-      - libcurl
-      - boost
+      - libglib2.0-0
+      - libcairo2-dev
+      - librsvg2-dev
+      - libfuse-dev
+      - libarchive-dev
+      - libxpm-dev
+      - libcurl4
+      - libboost-dev
       
     stage-packages:
       - make
       - cmake
-      - glib-2
-      - cairo
-      - librsvg
-      - fuse
-      - libarchive
-      - libXpm
-      - qt5
-      - libcurl
-      - boost    
+      - libglib2.0-0
+      - libcairo2-dev
+      - librsvg2-dev
+      - libfuse-dev
+      - libarchive-dev
+      - libxpm-dev
+      - libcurl4
+      - libboost-dev    
     
