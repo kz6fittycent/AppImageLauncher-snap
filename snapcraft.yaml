@@ -46,6 +46,7 @@ parts:
       - libxpm-dev
       - libcurl4
       - libboost-dev
+      - qt5-default
       
     stage-packages:
       - make
@@ -57,5 +58,6 @@ parts:
       - libarchive-dev
       - libxpm-dev
       - libcurl4
-      - libboost-dev    
+      - libboost-dev   
+      - qt5-default
     
