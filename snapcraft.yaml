@@ -48,6 +48,7 @@ parts:
       - libboost-dev
       - qt5-default
       - inotify-tools
+      - libinotifytools0-dev
       
     stage-packages:
       - make
@@ -62,4 +63,5 @@ parts:
       - libboost-dev   
       - qt5-default
       - inotify-tools
+      - libinotifytools0-dev
     
