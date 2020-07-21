@@ -49,6 +49,7 @@ parts:
       - qt5-default
       - inotify-tools
       - libinotifytools0-dev
+      - libappimage0
       
     stage-packages:
       - make
@@ -64,4 +65,4 @@ parts:
       - qt5-default
       - inotify-tools
       - libinotifytools0-dev
-    
+      - libappimage0  
