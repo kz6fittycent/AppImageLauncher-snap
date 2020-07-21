@@ -30,14 +30,7 @@ parts:
   appimagelauncher:
     source: https://github.com/TheAssassin/AppImageLauncher
     source-type: git
-    plugin: cmake
-    override-build: |
-      export PREFIX="/usr/local/"
-      mkdir build
-      cd build
-      make libappimage libappimageupdate libappimageupdate-qt
-      cmake .
-      make
+    plugin: autotools
     
     build-packages:
       - make
